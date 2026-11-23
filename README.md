@@ -1,8 +1,15 @@
+<div aling="center">
+  
 # Prima vacacional México 2026 — Google Sheets + Apps Script
 
 [![Licencia: GPL v3](https://img.shields.io/badge/licencia-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.html)
 [![Google Apps Script](https://img.shields.io/badge/Google%20Apps%20Script-V8-4285F4.svg)](https://developers.google.com/apps-script)
+![Google Sheets](https://img.shields.io/badge/Google%20Sheets-2026-0F9D58?logo=googlesheets&logoColor=white)
+![HTML5](https://img.shields.io/badge/HTML5-vanilla-E34F26?logo=html5&logoColor=white)
+![Dependencias](https://img.shields.io/badge/dependencias-0-2ea44f)
 [![Estado: herramienta informativa](https://img.shields.io/badge/estado-herramienta%20informativa-yellow.svg)](#limitaciones-y-descargo)
+
+</div>
 
 > **Aviso importante**
 >
