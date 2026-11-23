@@ -11,7 +11,7 @@
 
 </div>
 
-> **Aviso importante**
+> [!IMPORTANT]
 >
 > Este proyecto es una herramienta **informativa** de apoyo para estimar la prima vacacional en México. **No sustituye** la asesoría de un contador público, un abogado laboral ni la determinación oficial de nómina. Los cálculos dependen de los datos capturados y de los parámetros vigentes; antes de pagar, timbrar o declarar, verifica el caso con un profesional.
 
