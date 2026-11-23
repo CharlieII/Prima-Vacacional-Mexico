@@ -1,0 +1,1677 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <base target="_top">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prima vacacional 2026</title>
+  <style>
+    :root {
+      --bg: #eef4f5;
+      --card: #ffffff;
+      --ink: #12263a;
+      --muted: #5d7186;
+      --line: #d7e3e6;
+      --primary: #0b4f5c;
+      --primary-2: #0e6b7a;
+      --primary-soft: #e8f2f4;
+      --gold: #b47a24;
+      --gold-soft: #fff7e6;
+      --green: #0a7f5a;
+      --green-dark: #086247;
+      --danger: #b42318;
+      --danger-bg: #fff1f0;
+      --warning: #7a5200;
+      --warning-bg: #fff7e6;
+      --shadow: 0 10px 28px rgba(18, 38, 58, 0.09);
+      --radius: 16px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background:
+        radial-gradient(circle at 100% 0%, rgba(11, 79, 92, 0.10), transparent 34%),
+        radial-gradient(circle at 0% 30%, rgba(180, 122, 36, 0.07), transparent 28%),
+        var(--bg);
+      color: var(--ink);
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      line-height: 1.45;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    [hidden] { display: none !important; }
+
+    .app {
+      width: 100%;
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 14px;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, #083d48 0%, var(--primary) 54%, var(--primary-2) 100%);
+      color: #ffffff;
+      border-radius: 18px;
+      padding: 22px 20px 20px;
+      margin-bottom: 14px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 190px;
+      height: 190px;
+      right: -70px;
+      top: -90px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+    }
+
+    .eyebrow {
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      opacity: 0.82;
+    }
+
+    .hero h1 {
+      margin: 5px 0 7px;
+      font-size: 29px;
+      line-height: 1.08;
+      letter-spacing: -0.025em;
+    }
+
+    .hero p {
+      margin: 0;
+      max-width: 680px;
+      color: #d8edf1;
+      font-size: 13px;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 12px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      background: rgba(255, 255, 255, 0.10);
+      border-radius: 999px;
+      padding: 4px 9px;
+      font-size: 10.5px;
+      font-weight: 650;
+      color: #eaf8fa;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 18px;
+      margin-bottom: 14px;
+      box-shadow: var(--shadow);
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: 17px;
+      letter-spacing: -0.01em;
+    }
+
+    h3 {
+      margin: 0 0 8px;
+      font-size: 11px;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .section-head h2 { margin: 0; }
+
+    .section-note {
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .field { margin-bottom: 14px; }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 700;
+      font-size: 12.5px;
+    }
+
+    .req { color: var(--danger); }
+    .optional { color: var(--muted); font-weight: 400; font-size: 11.5px; }
+
+    input[type="text"],
+    input[type="number"],
+    input[type="date"],
+    select {
+      width: 100%;
+      min-height: 42px;
+      padding: 9px 11px;
+      border: 1px solid #b9c9cd;
+      border-radius: 10px;
+      background: #ffffff;
+      color: var(--ink);
+      font: inherit;
+      font-variant-numeric: tabular-nums;
+    }
+
+    select {
+      appearance: none;
+      background-image: linear-gradient(45deg, transparent 50%, var(--primary) 50%),
+        linear-gradient(135deg, var(--primary) 50%, transparent 50%);
+      background-position: calc(100% - 17px) 50%, calc(100% - 12px) 50%;
+      background-size: 5px 5px, 5px 5px;
+      background-repeat: no-repeat;
+      padding-right: 34px;
+    }
+
+    input[type="text"]:focus,
+    input[type="number"]:focus,
+    input[type="date"]:focus,
+    select:focus {
+      outline: 3px solid rgba(14, 107, 122, 0.18);
+      border-color: var(--primary-2);
+    }
+
+    input[aria-invalid="true"],
+    select[aria-invalid="true"] {
+      border-color: var(--danger);
+      background: #fffafa;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0 12px;
+    }
+
+    .money-wrap {
+      position: relative;
+    }
+
+    .money-wrap .prefix {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--muted);
+      font-weight: 800;
+      pointer-events: none;
+    }
+
+    .money-wrap input { padding-left: 28px; }
+    .money-wrap input#primaPct { padding-right: 30px; }
+
+    .hint {
+      margin: 5px 0 0;
+      color: var(--muted);
+      font-size: 11px;
+      line-height: 1.35;
+    }
+
+    .field-error {
+      margin: 5px 0 0;
+      color: var(--danger);
+      font-size: 11.5px;
+      font-weight: 650;
+    }
+
+    .base-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .radio-card {
+      position: relative;
+      display: block;
+      border: 1.5px solid var(--line);
+      border-radius: 12px;
+      padding: 12px;
+      margin: 0;
+      cursor: pointer;
+      background: #fbfdfd;
+      transition: border-color 0.15s ease, background 0.15s ease, transform 0.08s ease;
+    }
+
+    .radio-card:hover { border-color: #9ec1c8; }
+    .radio-card:active { transform: translateY(1px); }
+
+    .radio-card input {
+      position: absolute;
+      opacity: 0;
+      width: 1px;
+      height: 1px;
+      margin: 0;
+    }
+
+    .radio-card .radio-title {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-weight: 800;
+      font-size: 12.5px;
+    }
+
+    .radio-dot {
+      width: 15px;
+      height: 15px;
+      border: 2px solid #9db2b8;
+      border-radius: 50%;
+      display: inline-block;
+      flex: 0 0 auto;
+    }
+
+    .radio-card .radio-copy {
+      display: block;
+      margin: 4px 0 6px 22px;
+      color: var(--muted);
+      font-size: 10.5px;
+      line-height: 1.35;
+    }
+
+    .radio-card .radio-amount {
+      display: block;
+      margin-left: 22px;
+      font-weight: 800;
+      font-variant-numeric: tabular-nums;
+      font-size: 14px;
+      color: var(--primary);
+    }
+
+    .radio-card.selected {
+      border-color: var(--primary);
+      background: var(--primary-soft);
+      box-shadow: inset 0 0 0 1px rgba(11, 79, 92, 0.16);
+    }
+
+    .radio-card.selected .radio-dot {
+      border-color: var(--primary);
+      background: radial-gradient(circle at center, var(--primary) 0 45%, #ffffff 48% 100%);
+    }
+
+    .preview {
+      background: linear-gradient(135deg, #eef8f8, #f7fbfb);
+      border: 1px solid #cfe5e8;
+      border-radius: 12px;
+      padding: 12px;
+      margin-bottom: 14px;
+    }
+
+    .preview-line {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .preview-line span {
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 650;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .preview-line strong {
+      color: var(--primary);
+      font-size: 18px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .preview p {
+      margin: 4px 0 0;
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .checks {
+      display: grid;
+      gap: 8px;
+      margin: 4px 0 14px;
+    }
+
+    .check-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 9px;
+      padding: 10px 11px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: #fbfdfd;
+    }
+
+    .check-row input {
+      margin: 2px 0 0;
+      width: 17px;
+      height: 17px;
+      accent-color: var(--primary);
+      flex: 0 0 auto;
+    }
+
+    .check-row label {
+      margin: 0;
+      font-weight: 650;
+      font-size: 12px;
+    }
+
+    .check-row p {
+      margin: 3px 0 0;
+      color: var(--muted);
+      font-size: 10.5px;
+      line-height: 1.35;
+    }
+
+    .check-row.disabled {
+      opacity: 0.55;
+      background: #f5f7f8;
+    }
+
+    .actions {
+      display: flex;
+      gap: 8px;
+      margin-top: 4px;
+    }
+
+    button {
+      border: 0;
+      border-radius: 10px;
+      min-height: 44px;
+      padding: 10px 14px;
+      font: inherit;
+      font-weight: 800;
+      cursor: pointer;
+      transition: transform 0.08s ease, background 0.15s ease, opacity 0.15s ease;
+    }
+
+    button:active { transform: translateY(1px); }
+    button:disabled { cursor: wait; opacity: 0.7; }
+
+    .btn-primary {
+      flex: 1 1 auto;
+      background: var(--primary);
+      color: #ffffff;
+    }
+
+    .btn-primary:hover { background: var(--primary-2); }
+
+    .btn-secondary {
+      flex: 0 0 auto;
+      background: #eaf0f2;
+      color: var(--primary);
+    }
+
+    .btn-secondary:hover { background: #dfe9ec; }
+
+    .btn-gold {
+      flex: 0 0 auto;
+      background: var(--gold-soft);
+      color: #7a5200;
+      border: 1px solid #ead5a6;
+    }
+
+    .btn-gold:hover { background: #fff1d1; }
+
+    .legal-mini {
+      margin: 11px 0 0;
+      color: var(--muted);
+      font-size: 10.5px;
+      line-height: 1.4;
+    }
+
+    .banner {
+      border-radius: 11px;
+      padding: 11px 13px;
+      margin-bottom: 13px;
+      font-size: 12.5px;
+      font-weight: 650;
+      border: 1px solid transparent;
+    }
+
+    .banner.error {
+      background: var(--danger-bg);
+      color: var(--danger);
+      border-color: #f2b8b5;
+    }
+
+    .banner.info {
+      background: var(--primary-soft);
+      color: var(--primary);
+      border-color: #bfdde3;
+    }
+
+    .banner.success {
+      background: #e9f7f0;
+      color: var(--green-dark);
+      border-color: #b9e3cf;
+    }
+
+    .results-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+
+    .results-head h2 { margin: 0; }
+
+    .pill {
+      display: inline-block;
+      max-width: 100%;
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: #eef4f5;
+      color: var(--muted);
+      font-size: 10.5px;
+      font-weight: 700;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .pill.ok {
+      background: #e9f7f0;
+      color: var(--green-dark);
+    }
+
+    .net-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      background: linear-gradient(135deg, var(--green), var(--green-dark));
+      color: #ffffff;
+      border-radius: 13px;
+      padding: 15px;
+      margin-bottom: 10px;
+      box-shadow: 0 8px 18px rgba(10, 127, 90, 0.18);
+    }
+
+    .net-card span {
+      font-size: 10.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      opacity: 0.88;
+    }
+
+    .net-card strong {
+      font-size: 28px;
+      line-height: 1;
+      font-variant-numeric: tabular-nums;
+      text-align: right;
+      word-break: break-word;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 8px;
+    }
+
+    .metric {
+      background: #f7fafb;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 9px 10px;
+      min-width: 0;
+    }
+
+    .metric span {
+      display: block;
+      color: var(--muted);
+      font-size: 9.5px;
+      font-weight: 750;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+
+    .metric strong {
+      display: block;
+      font-size: 14.5px;
+      font-variant-numeric: tabular-nums;
+      word-break: break-word;
+    }
+
+    details {
+      margin-top: 12px;
+      border-top: 1px solid var(--line);
+      padding-top: 10px;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: 800;
+      color: var(--primary);
+      font-size: 12.5px;
+      list-style-position: outside;
+      padding: 2px 0;
+    }
+
+    summary:hover { color: var(--primary-2); }
+
+    .detail-block {
+      margin-top: 12px;
+      padding-top: 10px;
+      border-top: 1px dashed var(--line);
+    }
+
+    .detail-block:first-child {
+      border-top: 0;
+      padding-top: 0;
+    }
+
+    dl {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 4px 12px;
+      margin: 0;
+    }
+
+    dt {
+      color: var(--muted);
+      font-size: 11.5px;
+      min-width: 0;
+    }
+
+    dd {
+      margin: 0;
+      text-align: right;
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+      font-size: 11.5px;
+      word-break: break-word;
+    }
+
+    .detail-note {
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: 10.5px;
+      line-height: 1.4;
+    }
+
+    .warnings {
+      margin-top: 12px;
+      background: var(--warning-bg);
+      border: 1px solid #f1d49a;
+      border-radius: 10px;
+      padding: 10px 12px;
+    }
+
+    .warnings h3 {
+      color: var(--warning);
+      margin-bottom: 5px;
+    }
+
+    .warnings ul {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--warning);
+      font-size: 11.5px;
+    }
+
+    .warnings li { margin-bottom: 5px; }
+
+    .params-list {
+      grid-template-columns: minmax(0, 1fr) auto;
+      margin-top: 8px;
+    }
+
+    .params-note {
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: 10.5px;
+      line-height: 1.4;
+    }
+
+    footer {
+      color: var(--muted);
+      font-size: 10px;
+      text-align: center;
+      padding: 2px 8px 20px;
+      line-height: 1.45;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    @media (max-width: 680px) {
+      .grid-2 { grid-template-columns: 1fr; }
+      .metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
+    @media (max-width: 430px) {
+      .app { padding: 9px; }
+      .hero { padding: 18px 15px; }
+      .hero h1 { font-size: 25px; }
+      .base-grid { grid-template-columns: 1fr; }
+      .metrics { grid-template-columns: 1fr; }
+      .net-card strong { font-size: 23px; }
+      .actions { flex-direction: column; }
+      .btn-secondary, .btn-gold { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <header class="hero">
+      <div class="eyebrow">México · Ejercicio <span id="anioTitulo">2026</span> · LFT</div>
+      <h1>Prima vacacional</h1>
+      <p>Calcula los días que corresponden, elige la base salarial y obtén la prima bruta, el ISR, las deducciones y el neto.</p>
+      <div class="hero-badges">
+        <span class="hero-badge">Art. 76 y 80 LFT</span>
+        <span class="hero-badge">ISR 2026 · Anexo 8 RMF</span>
+        <span class="hero-badge">UMA $117.31</span>
+      </div>
+    </header>
+
+    <div id="banner" class="banner" role="alert" hidden></div>
+
+    <main>
+      <section class="card" aria-labelledby="titulo-formulario">
+        <div class="section-head">
+          <h2 id="titulo-formulario">Datos del trabajador</h2>
+          <span class="section-note">Los campos con <span class="req">*</span> son obligatorios</span>
+        </div>
+
+        <form id="form" novalidate>
+          <div class="field">
+            <label for="nombre">Nombre <span class="optional">(opcional)</span></label>
+            <input id="nombre" name="nombre" type="text" maxlength="120" placeholder="Nombre del trabajador" autocomplete="off">
+          </div>
+
+          <div class="grid-2">
+            <div class="field">
+              <label for="fechaIngreso">Fecha de ingreso <span class="req" aria-hidden="true">*</span></label>
+              <input id="fechaIngreso" name="fechaIngreso" type="date" min="1900-01-01" required>
+              <p id="error-fechaIngreso" class="field-error" hidden></p>
+            </div>
+
+            <div class="field">
+              <label for="fechaCorte">Fecha de corte <span class="req" aria-hidden="true">*</span></label>
+              <input id="fechaCorte" name="fechaCorte" type="date" min="1900-01-01" required>
+              <p id="error-fechaCorte" class="field-error" hidden></p>
+            </div>
+          </div>
+
+          <div class="grid-2">
+            <div class="field">
+              <label for="salarioDiario">Salario diario <span class="req" aria-hidden="true">*</span></label>
+              <div class="money-wrap">
+                <span class="prefix" aria-hidden="true">$</span>
+                <input id="salarioDiario" name="salarioDiario" type="number" inputmode="decimal" min="0.01" step="0.01" placeholder="750.00" required>
+              </div>
+              <p id="error-salarioDiario" class="field-error" hidden></p>
+            </div>
+
+            <div class="field">
+              <label for="salarioDiarioIntegrado">Salario diario integrado (SDI) <span class="req" aria-hidden="true">*</span></label>
+              <div class="money-wrap">
+                <span class="prefix" aria-hidden="true">$</span>
+                <input id="salarioDiarioIntegrado" name="salarioDiarioIntegrado" type="number" inputmode="decimal" min="0.01" step="0.01" placeholder="875.00" required>
+              </div>
+              <p id="error-salarioDiarioIntegrado" class="field-error" hidden></p>
+            </div>
+          </div>
+
+          <div class="field">
+            <label>Base salarial para la prima <span class="req" aria-hidden="true">*</span></label>
+            <div class="base-grid" role="radiogroup" aria-label="Base salarial para la prima">
+              <label class="radio-card" id="cardBaseDiario">
+                <input type="radio" name="baseSalarial" value="Salario diario">
+                <span class="radio-title"><span class="radio-dot" aria-hidden="true"></span>Salario diario</span>
+                <span class="radio-copy">Salario base del puesto, sin integrar prestaciones.</span>
+                <span class="radio-amount" id="montoBaseDiario">$0.00</span>
+              </label>
+
+              <label class="radio-card" id="cardBaseSDI">
+                <input type="radio" name="baseSalarial" value="Salario diario integrado">
+                <span class="radio-title"><span class="radio-dot" aria-hidden="true"></span>Salario diario integrado</span>
+                <span class="radio-copy">Incluye la parte proporcional de prestaciones (SDI).</span>
+                <span class="radio-amount" id="montoBaseSDI">$0.00</span>
+              </label>
+            </div>
+            <p class="hint" id="baseHint">La prima se calculará con la base seleccionada.</p>
+            <p id="error-baseSalarial" class="field-error" hidden></p>
+          </div>
+
+          <div class="preview" aria-live="polite">
+            <div class="preview-line">
+              <span id="previewAntiguedadLabel">Antigüedad</span>
+              <strong id="previewAntiguedad">—</strong>
+            </div>
+            <p id="previewDias">Captura la fecha de ingreso y la fecha de corte para ver los días que corresponden.</p>
+          </div>
+
+          <div class="grid-2">
+            <div class="field">
+              <label for="diasPendientes">Días pendientes por pagar <span class="optional">(opcional)</span></label>
+              <input id="diasPendientes" name="diasPendientes" type="number" inputmode="numeric" min="0" step="1" placeholder="Periodo completo">
+              <p class="hint">Si los capturas, la prima se calcula solo por estos días. Si los dejas vacíos, se usan los días gozados o el periodo completo.</p>
+              <p id="error-diasPendientes" class="field-error" hidden></p>
+            </div>
+
+            <div class="field">
+              <label for="diasGozados">Días ya gozados <span class="optional">(referencia)</span></label>
+              <input id="diasGozados" name="diasGozados" type="number" inputmode="numeric" min="0" step="1" value="0">
+              <p class="hint">Si no capturas pendientes, la prima se calcula sobre estos días.</p>
+              <p id="error-diasGozados" class="field-error" hidden></p>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="primaPct">Porcentaje de prima vacacional <span class="req" aria-hidden="true">*</span></label>
+            <div class="money-wrap">
+              <input id="primaPct" name="primaPct" type="number" inputmode="decimal" min="25" max="500" step="0.01" value="25" required>
+              <span class="prefix" style="left:auto;right:12px;font-weight:700">%</span>
+            </div>
+            <p class="hint" id="primaHint">Mínimo legal: 25%. Puedes capturar un porcentaje mayor si la empresa lo otorga.</p>
+            <p id="error-primaPct" class="field-error" hidden></p>
+          </div>
+
+          <div class="grid-2">
+            <div class="field">
+              <label for="ingresoMensual">Ingreso mensual ordinario <span class="optional">(para ISR)</span></label>
+              <div class="money-wrap">
+                <span class="prefix" aria-hidden="true">$</span>
+                <input id="ingresoMensual" name="ingresoMensual" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Se estima con salario diario × 30.4">
+              </div>
+              <p class="hint">Salario mensual sin la prima. Si se deja vacío se estima automáticamente.</p>
+              <p id="error-ingresoMensual" class="field-error" hidden></p>
+            </div>
+
+            <div class="field">
+              <label for="metodoISR">Método de retención de ISR</label>
+              <select id="metodoISR" name="metodoISR">
+                <option value="Art. 174 RLISR (recomendado)">Art. 174 RLISR (recomendado)</option>
+                <option value="Tarifa mensual directa">Tarifa mensual directa</option>
+              </select>
+              <p class="hint" id="metodoHint">El art. 174 es el procedimiento opcional para pagos extraordinarios.</p>
+            </div>
+          </div>
+
+          <div class="checks">
+            <div class="check-row" id="rowSubsidio">
+              <input id="aplicarSubsidio" name="aplicarSubsidio" type="checkbox">
+              <div>
+                <label for="aplicarSubsidio">Aplicar subsidio al empleo</label>
+                <p>Solo aplica con la tarifa mensual directa. No se usa con el art. 174.</p>
+              </div>
+            </div>
+
+            <div class="check-row">
+              <input id="deducirIMSS" name="deducirIMSS" type="checkbox">
+              <div>
+                <label for="deducirIMSS">Deducir cuota obrera IMSS de la prima</label>
+                <p>Por defecto No: la prima integra el SBC y la cuota se determina en la cédula mensual.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-2">
+            <div class="field">
+              <label for="otrasDeducciones">Otras deducciones <span class="optional">(opcional)</span></label>
+              <div class="money-wrap">
+                <span class="prefix" aria-hidden="true">$</span>
+                <input id="otrasDeducciones" name="otrasDeducciones" type="number" inputmode="decimal" min="0" step="0.01" value="0">
+              </div>
+              <p id="error-otrasDeducciones" class="field-error" hidden></p>
+            </div>
+
+            <div class="field">
+              <label for="conceptoOtras">Concepto de otras deducciones <span class="optional">(opcional)</span></label>
+              <input id="conceptoOtras" name="conceptoOtras" type="text" maxlength="160" placeholder="Préstamo, pensión alimenticia…">
+            </div>
+          </div>
+
+          <div class="actions">
+            <button type="submit" id="btnCalcular" class="btn-primary">Calcular prima</button>
+            <button type="button" id="btnGuardar" class="btn-gold">Guardar en hoja</button>
+            <button type="button" id="btnLimpiar" class="btn-secondary">Limpiar</button>
+          </div>
+
+          <p class="legal-mini">
+            Resultado informativo. No sustituye la asesoría de un contador público ni la determinación oficial de nómina.
+            La exención de ISR es anual y el ISR definitivo se ajusta en la declaración anual.
+          </p>
+        </form>
+      </section>
+
+      <section id="resultados" class="card" aria-labelledby="titulo-resultados" aria-live="polite" hidden>
+        <div class="results-head">
+          <h2 id="titulo-resultados">Resultado</h2>
+          <span id="guardadoEstado" class="pill ok" hidden>Guardado en hoja</span>
+          <span id="periodo" class="pill"></span>
+        </div>
+
+        <div class="net-card">
+          <span>Prima neta a pagar</span>
+          <strong id="neto">—</strong>
+        </div>
+
+        <div class="metrics">
+          <div class="metric">
+            <span>Prima bruta</span>
+            <strong id="bruto">—</strong>
+          </div>
+          <div class="metric">
+            <span>ISR retenido</span>
+            <strong id="isr">—</strong>
+          </div>
+          <div class="metric">
+            <span>IMSS obrero</span>
+            <strong id="imss">—</strong>
+          </div>
+          <div class="metric">
+            <span>Otras deducciones</span>
+            <strong id="otras">—</strong>
+          </div>
+          <div class="metric">
+            <span>Días pagados</span>
+            <strong id="diasPagados">—</strong>
+          </div>
+          <div class="metric">
+            <span>Base aplicada</span>
+            <strong id="baseAplicada">—</strong>
+          </div>
+        </div>
+
+        <details open>
+          <summary>Detalle del cálculo</summary>
+          <div id="detalle"></div>
+        </details>
+
+        <div id="advertencias" class="warnings" hidden>
+          <h3>Advertencias</h3>
+          <ul id="listaAdvertencias"></ul>
+        </div>
+
+        <details>
+          <summary>Parámetros y fuentes</summary>
+          <dl class="params-list">
+            <dt>UMA diaria</dt>
+            <dd id="paramUma">—</dd>
+            <dt id="paramExencionLabel">Exención de ISR (15 UMA)</dt>
+            <dd id="paramExencion">—</dd>
+            <dt>Prima mínima</dt>
+            <dd id="paramPrimaMinima">—</dd>
+            <dt>Tarifa de ISR</dt>
+            <dd>Mensual 2026 · Anexo 8 RMF</dd>
+            <dt>Última actualización</dt>
+            <dd id="paramActualizacion">—</dd>
+          </dl>
+          <p class="params-note">
+            Fuentes: LFT arts. 76 y 80; LISR arts. 93 y 96; RLISR art. 174; LSS arts. 27, 30 y 168;
+            INEGI (UMA 2026) y SAT (Anexo 8 RMF 2026, DOF 28/12/2025). Revisa la hoja “Parámetros” para el detalle.
+          </p>
+        </details>
+      </section>
+    </main>
+
+    <footer>
+      Prima vacacional 2026 · Importes en MXN · Herramienta informativa · No incluye ISN estatal, cuotas patronales, INFONAVIT, SAR ni ajuste anual.
+    </footer>
+  </div>
+
+  <script>
+    (function () {
+      'use strict';
+
+      var state = {
+        anioFiscal: 2026,
+        metodo174: 'Art. 174 RLISR (recomendado)',
+        metodoDirecto: 'Tarifa mensual directa',
+        baseDiario: 'Salario diario',
+        baseSDI: 'Salario diario integrado',
+        primaMinima: 0.25,
+        tablaVacaciones: [],
+        cargado: false,
+        ocupado: false
+      };
+
+      function byId(id) {
+        return document.getElementById(id);
+      }
+
+      function setText(id, value) {
+        var el = byId(id);
+        if (el) el.textContent = value == null ? '' : String(value);
+      }
+
+      function init() {
+        byId('form').addEventListener('submit', onSubmit);
+        byId('btnGuardar').addEventListener('click', onGuardar);
+        byId('btnLimpiar').addEventListener('click', limpiarFormulario);
+
+        ['fechaIngreso', 'fechaCorte', 'salarioDiario', 'salarioDiarioIntegrado',
+          'diasPendientes', 'diasGozados', 'primaPct', 'ingresoMensual',
+          'otrasDeducciones'].forEach(function (id) {
+          var el = byId(id);
+          el.addEventListener('input', function () {
+            limpiarErrorCampo(id);
+            actualizarPreview();
+            actualizarMontosBase();
+          });
+          el.addEventListener('change', function () {
+            limpiarErrorCampo(id);
+            actualizarPreview();
+            actualizarMontosBase();
+          });
+        });
+
+        document.querySelectorAll('input[name="baseSalarial"]').forEach(function (radio) {
+          radio.addEventListener('change', function () {
+            limpiarErrorCampo('baseSalarial');
+            marcarBaseSeleccionada();
+          });
+        });
+
+        byId('metodoISR').addEventListener('change', actualizarMetodo);
+        byId('aplicarSubsidio').addEventListener('change', limpiarErrores);
+
+        byId('fechaIngreso').addEventListener('change', function () {
+          var ingreso = byId('fechaIngreso').value;
+          if (ingreso) byId('fechaCorte').min = ingreso;
+          actualizarPreview();
+        });
+
+        cargarDatosIniciales();
+      }
+
+      function cargarDatosIniciales() {
+        if (typeof google === 'undefined' || !google.script || !google.script.run) {
+          mostrarBanner('Abre esta calculadora desde Google Sheets o desde la aplicación web implementada. Sin google.script.run no es posible leer los parámetros.', 'error');
+          deshabilitarFormulario();
+          return;
+        }
+
+        mostrarBanner('Cargando parámetros de la hoja…', 'info');
+        google.script.run
+          .withSuccessHandler(function (data) {
+            if (!data || !data.ok) {
+              mostrarBanner('No se pudieron cargar los parámetros. Revisa la hoja “Parámetros”.', 'error');
+              return;
+            }
+
+            state.anioFiscal = data.anioFiscal;
+            state.metodo174 = data.metodo174;
+            state.metodoDirecto = data.metodoDirecto;
+            state.baseDiario = data.baseDiario;
+            state.baseSDI = data.baseSDI;
+            state.primaMinima = data.primaMinima;
+            state.tablaVacaciones = data.tablaVacaciones || [];
+            state.cargado = true;
+
+            setText('anioTitulo', data.anioFiscal);
+            setText('paramUma', data.umaDiariaFormateada);
+            setText('paramExencionLabel', 'Exención de ISR (' + data.diasExencionUMA + ' UMA)');
+            setText('paramExencion', data.exencionMaximaFormateada);
+            setText('paramPrimaMinima', data.primaMinimaFormateada);
+            setText('paramActualizacion', data.fechaActualizacion || '—');
+            byId('primaPct').min = String((data.primaMinima * 100).toFixed(2));
+            byId('primaHint').textContent = 'Mínimo legal: ' + data.primaMinimaFormateada + '. Puedes capturar un porcentaje mayor si la empresa lo otorga.';
+
+            var metodo = byId('metodoISR');
+            metodo.replaceChildren();
+            [data.metodo174, data.metodoDirecto].forEach(function (valor) {
+              var opcion = document.createElement('option');
+              opcion.value = valor;
+              opcion.textContent = valor;
+              metodo.appendChild(opcion);
+            });
+
+            llenarFormulario(data.entrada || {}, data);
+            actualizarMetodo();
+            actualizarPreview();
+            actualizarMontosBase();
+            ocultarBanner();
+          })
+          .withFailureHandler(function (error) {
+            mostrarBanner('No se pudieron cargar los parámetros: ' + mensajeError(error) + ' Recarga la hoja e intenta de nuevo.', 'error');
+            deshabilitarFormulario();
+          })
+          .obtenerDatosIniciales();
+      }
+
+      function llenarFormulario(entrada, data) {
+        byId('nombre').value = entrada.nombre || '';
+
+        byId('fechaIngreso').value = entrada.fechaIngreso || '';
+        byId('fechaCorte').value = entrada.fechaCorte || data.fechaCorteSugerida || hoyISO();
+
+        byId('salarioDiario').value = numeroParaInput(entrada.salarioDiario);
+        byId('salarioDiarioIntegrado').value = numeroParaInput(entrada.salarioDiarioIntegrado);
+
+        var base = entrada.baseSalarial === state.baseDiario ? state.baseDiario : state.baseSDI;
+        document.querySelectorAll('input[name="baseSalarial"]').forEach(function (radio) {
+          radio.checked = radio.value === base;
+        });
+        marcarBaseSeleccionada();
+
+        byId('diasPendientes').value = entrada.diasPendientes == null ? '' : numeroParaInput(entrada.diasPendientes);
+        byId('diasGozados').value = numeroParaInput(entrada.diasGozados || 0);
+
+        var prima = Number(entrada.primaPct);
+        if (!isFinite(prima) || prima <= 0) prima = state.primaMinima;
+        byId('primaPct').value = (prima * 100).toFixed(2);
+
+        byId('ingresoMensual').value = entrada.ingresoMensual == null ? '' : numeroParaInput(entrada.ingresoMensual);
+        byId('metodoISR').value = entrada.metodoISR === state.metodoDirecto ? state.metodoDirecto : state.metodo174;
+        byId('aplicarSubsidio').checked = String(entrada.aplicarSubsidio || '').toLowerCase() === 'sí' || String(entrada.aplicarSubsidio || '').toLowerCase() === 'si';
+        byId('deducirIMSS').checked = String(entrada.deducirIMSS || '').toLowerCase() === 'sí' || String(entrada.deducirIMSS || '').toLowerCase() === 'si';
+
+        byId('otrasDeducciones').value = numeroParaInput(entrada.otrasDeducciones || 0);
+        byId('conceptoOtras').value = entrada.conceptoOtras || '';
+
+        var ingreso = byId('fechaIngreso').value;
+        if (ingreso) byId('fechaCorte').min = ingreso;
+
+        limpiarErrores();
+      }
+
+      function actualizarMetodo() {
+        var es174 = byId('metodoISR').value === state.metodo174;
+        var subsidio = byId('aplicarSubsidio');
+        var fila = byId('rowSubsidio');
+
+        subsidio.disabled = es174;
+        if (es174) subsidio.checked = false;
+        fila.classList.toggle('disabled', es174);
+
+        setText('metodoHint', es174
+          ? 'El art. 174 es el procedimiento opcional para pagos extraordinarios. El subsidio no se aplica con este método.'
+          : 'La tarifa mensual directa permite aplicar el subsidio al empleo si corresponde.');
+      }
+
+      function marcarBaseSeleccionada() {
+        var seleccionada = obtenerBaseSeleccionada();
+        byId('cardBaseDiario').classList.toggle('selected', seleccionada === state.baseDiario);
+        byId('cardBaseSDI').classList.toggle('selected', seleccionada === state.baseSDI);
+
+        var monto = seleccionada === state.baseSDI
+          ? byId('salarioDiarioIntegrado').value
+          : byId('salarioDiario').value;
+        setText('baseHint', 'La prima se calculará con ' + seleccionada.toLowerCase() + ': ' + formatearMonedaLocal(monto) + '.');
+      }
+
+      function actualizarMontosBase() {
+        setText('montoBaseDiario', formatearMonedaLocal(byId('salarioDiario').value));
+        setText('montoBaseSDI', formatearMonedaLocal(byId('salarioDiarioIntegrado').value));
+        marcarBaseSeleccionada();
+      }
+
+      function actualizarPreview() {
+        var ingreso = byId('fechaIngreso').value;
+        var corte = byId('fechaCorte').value;
+        if (!ingreso || !corte) {
+          setText('previewAntiguedad', '—');
+          setText('previewDias', 'Captura la fecha de ingreso y la fecha de corte para ver los días que corresponden.');
+          return;
+        }
+
+        var anios = calcularAnios(ingreso, corte);
+        if (anios === null) {
+          setText('previewAntiguedad', '—');
+          setText('previewDias', 'Revisa las fechas: la fecha de corte no puede ser anterior al ingreso.');
+          return;
+        }
+
+        var dias = buscarDias(anios);
+        if (anios < 1) {
+          setText('previewAntiguedad', anios + ' año' + (anios === 1 ? '' : 's'));
+          setText('previewDias', 'La tabla aplica a partir de 1 año cumplido. Revisa la fecha de ingreso.');
+          return;
+        }
+        if (anios > 35) {
+          setText('previewAntiguedad', anios + ' años');
+          setText('previewDias', 'La tabla de esta herramienta llega a 35 años. Actualiza el alcance en “Parámetros” si necesitas más.');
+          return;
+        }
+
+        var gozados = Number(byId('diasGozados').value || 0);
+        if (!isFinite(gozados) || gozados < 0) gozados = 0;
+        var disponibles = Math.max(0, dias - gozados);
+        var pendientesRaw = byId('diasPendientes').value.trim();
+        var pagar;
+        if (pendientesRaw !== '') {
+          var pendientes = Number(pendientesRaw);
+          pagar = isFinite(pendientes) ? Math.min(Math.max(0, pendientes), disponibles) : 0;
+        } else if (gozados > 0) {
+          pagar = Math.min(gozados, dias);
+        } else {
+          pagar = dias;
+        }
+
+        setText('previewAntiguedad', anios + ' año' + (anios === 1 ? '' : 's'));
+        setText(
+          'previewDias',
+          'Te corresponden ' + dias + ' días. La prima se calculará sobre ' + pagar + ' días' +
+          (gozados > 0 ? ' (gozados: ' + gozados + '; disponibles: ' + disponibles + ').' : '.')
+        );
+      }
+
+      function onSubmit(event) {
+        event.preventDefault();
+        if (state.ocupado) return;
+
+        ocultarBanner();
+        byId('resultados').hidden = true;
+
+        var payload = validarFormulario();
+        if (!payload) return;
+
+        setCargando(true, 'Calculando…');
+        google.script.run
+          .withSuccessHandler(function (respuesta) {
+            setCargando(false);
+            manejarRespuesta(respuesta, false);
+          })
+          .withFailureHandler(function (error) {
+            setCargando(false);
+            mostrarBanner('No se pudo calcular: ' + mensajeError(error), 'error');
+          })
+          .calcularPrimaVacacional(payload);
+      }
+
+      function onGuardar() {
+        if (state.ocupado) return;
+        ocultarBanner();
+
+        var payload = validarFormulario();
+        if (!payload) return;
+
+        setCargando(true, 'Guardando…');
+        google.script.run
+          .withSuccessHandler(function (respuesta) {
+            setCargando(false);
+            manejarRespuesta(respuesta, true);
+          })
+          .withFailureHandler(function (error) {
+            setCargando(false);
+            mostrarBanner('No se pudo guardar: ' + mensajeError(error), 'error');
+          })
+          .guardarYCalcular(payload);
+      }
+
+      function manejarRespuesta(respuesta, guardado) {
+        if (!respuesta || !respuesta.ok) {
+          mostrarErroresServidor(respuesta && respuesta.errores ? respuesta.errores : []);
+          return;
+        }
+
+        renderResultado(respuesta.resultado, respuesta.advertencias || []);
+        byId('guardadoEstado').hidden = !guardado;
+        if (guardado) {
+          mostrarBanner('Datos guardados en la hoja “Entrada”. La hoja “Resultados” quedó actualizada con fórmulas.', 'success');
+        }
+      }
+
+      function validarFormulario() {
+        limpiarErrores();
+        var errores = {};
+
+        var fechaIngreso = byId('fechaIngreso').value;
+        var fechaCorte = byId('fechaCorte').value;
+
+        if (!fechaIngreso) errores.fechaIngreso = 'Selecciona la fecha de ingreso.';
+        if (!fechaCorte) errores.fechaCorte = 'Selecciona la fecha de corte.';
+
+        if (fechaIngreso && fechaCorte) {
+          if (fechaCorte < fechaIngreso) {
+            errores.fechaCorte = 'La fecha de corte no puede ser anterior a la fecha de ingreso.';
+          } else {
+            var anios = calcularAnios(fechaIngreso, fechaCorte);
+            if (anios === null) {
+              errores.fechaCorte = 'No se pudo calcular la antigüedad. Revisa las fechas.';
+            } else if (anios < 1) {
+              errores.fechaIngreso = 'La antigüedad debe ser de al menos 1 año cumplido.';
+            } else if (anios > 35) {
+              errores.fechaIngreso = 'La antigüedad es de ' + anios + ' años y excede el máximo de 35 años.';
+            }
+          }
+        }
+
+        var salarioDiario = numeroOpcion(byId('salarioDiario').value);
+        if (!isFinite(salarioDiario) || salarioDiario <= 0) {
+          errores.salarioDiario = 'Captura un salario diario mayor a cero.';
+        }
+
+        var sdi = numeroOpcion(byId('salarioDiarioIntegrado').value);
+        if (!isFinite(sdi) || sdi <= 0) {
+          errores.salarioDiarioIntegrado = 'Captura un salario diario integrado mayor a cero.';
+        }
+
+        var base = obtenerBaseSeleccionada();
+        if (!base) errores.baseSalarial = 'Elige la base salarial para la prima.';
+
+        var diasGozados = numeroOpcion(byId('diasGozados').value);
+        if (!isFinite(diasGozados) || diasGozados < 0 || Math.abs(diasGozados - Math.round(diasGozados)) > 0.000001) {
+          errores.diasGozados = 'Los días gozados deben ser un entero mayor o igual a cero.';
+        } else {
+          diasGozados = Math.round(diasGozados);
+        }
+
+        var diasPendientesRaw = byId('diasPendientes').value.trim();
+        var diasPendientes = null;
+        if (diasPendientesRaw !== '') {
+          diasPendientes = Number(diasPendientesRaw);
+          if (!isFinite(diasPendientes) || diasPendientes < 0 || Math.abs(diasPendientes - Math.round(diasPendientes)) > 0.000001) {
+            errores.diasPendientes = 'Los días pendientes deben ser un entero mayor o igual a cero.';
+          } else {
+            diasPendientes = Math.round(diasPendientes);
+          }
+        }
+
+        if (fechaIngreso && fechaCorte && !errores.fechaIngreso && !errores.fechaCorte) {
+          var aniosOk = calcularAnios(fechaIngreso, fechaCorte);
+          var diasCorresponden = buscarDias(aniosOk);
+          var disponibles = Math.max(0, diasCorresponden - (isFinite(diasGozados) ? diasGozados : 0));
+
+          if (isFinite(diasGozados) && diasGozados > diasCorresponden && diasCorresponden > 0) {
+            errores.diasGozados = 'Los días gozados (' + diasGozados + ') exceden los días que corresponden (' + diasCorresponden + ').';
+          }
+          if (diasPendientes !== null && diasPendientes > disponibles && diasCorresponden > 0) {
+            errores.diasPendientes = 'Los días pendientes (' + diasPendientes + ') exceden los disponibles (' + disponibles + ').';
+          }
+        }
+
+        var primaPct = numeroOpcion(byId('primaPct').value);
+        var primaMinima = state.primaMinima * 100;
+        if (!isFinite(primaPct) || primaPct < primaMinima) {
+          errores.primaPct = 'La prima no puede ser menor al mínimo de ' + formatearPorcentajeLocal(primaMinima) + '.';
+        } else if (primaPct > 500) {
+          errores.primaPct = 'La prima no puede exceder 500%.';
+        }
+
+        var ingresoRaw = byId('ingresoMensual').value.trim();
+        var ingresoMensual = null;
+        if (ingresoRaw !== '') {
+          ingresoMensual = Number(ingresoRaw);
+          if (!isFinite(ingresoMensual) || ingresoMensual < 0) {
+            errores.ingresoMensual = 'El ingreso mensual debe ser mayor o igual a cero.';
+          }
+        }
+
+        var otras = numeroOpcion(byId('otrasDeducciones').value);
+        if (!isFinite(otras) || otras < 0) {
+          errores.otrasDeducciones = 'Las otras deducciones deben ser un número mayor o igual a cero.';
+        }
+
+        var claves = Object.keys(errores);
+        if (claves.length > 0) {
+          claves.forEach(function (campo) {
+            mostrarErrorCampo(campo, errores[campo]);
+          });
+          var primero = byId(claves[0]);
+          if (primero && primero.focus) primero.focus();
+          mostrarBanner('Revisa los datos marcados en rojo.', 'error');
+          return null;
+        }
+
+        return {
+          nombre: byId('nombre').value.trim(),
+          fechaIngreso: fechaIngreso,
+          fechaCorte: fechaCorte,
+          salarioDiario: salarioDiario,
+          salarioDiarioIntegrado: sdi,
+          baseSalarial: base,
+          diasPendientes: diasPendientes,
+          diasGozados: diasGozados,
+          primaPct: primaPct,
+          ingresoMensual: ingresoMensual,
+          metodoISR: byId('metodoISR').value,
+          aplicarSubsidio: byId('aplicarSubsidio').checked,
+          deducirIMSS: byId('deducirIMSS').checked,
+          otrasDeducciones: otras,
+          conceptoOtras: byId('conceptoOtras').value.trim()
+        };
+      }
+
+      function mostrarErroresServidor(errores) {
+        if (!errores || errores.length === 0) {
+          mostrarBanner('No se pudo calcular. Revisa los datos e intenta de nuevo.', 'error');
+          return;
+        }
+
+        errores.forEach(function (error) {
+          if (error.campo) mostrarErrorCampo(error.campo, error.mensaje);
+        });
+
+        var primero = errores.find(function (error) { return error.campo; });
+        if (primero) {
+          var el = byId(primero.campo);
+          if (el && el.focus) el.focus();
+        }
+        mostrarBanner(errores[0].mensaje || 'Revisa los datos e intenta de nuevo.', 'error');
+      }
+
+      function mostrarErrorCampo(campo, mensaje) {
+        var input = byId(campo);
+        var error = byId('error-' + campo);
+        if (input) input.setAttribute('aria-invalid', 'true');
+        if (error) {
+          error.textContent = mensaje;
+          error.hidden = false;
+        }
+      }
+
+      function limpiarErrorCampo(campo) {
+        var input = byId(campo);
+        var error = byId('error-' + campo);
+        if (input) input.removeAttribute('aria-invalid');
+        if (error) {
+          error.textContent = '';
+          error.hidden = true;
+        }
+      }
+
+      function limpiarErrores() {
+        ['fechaIngreso', 'fechaCorte', 'salarioDiario', 'salarioDiarioIntegrado',
+          'baseSalarial', 'diasPendientes', 'diasGozados', 'primaPct',
+          'ingresoMensual', 'otrasDeducciones'].forEach(limpiarErrorCampo);
+      }
+
+      function setCargando(cargando, etiqueta) {
+        state.ocupado = cargando;
+        var boton = byId('btnCalcular');
+        var guardar = byId('btnGuardar');
+        var limpiar = byId('btnLimpiar');
+        boton.disabled = cargando;
+        guardar.disabled = cargando;
+        limpiar.disabled = cargando;
+        boton.textContent = cargando ? (etiqueta || 'Calculando…') : 'Calcular prima';
+      }
+
+      function renderResultado(resultado, advertencias) {
+        var f = resultado.formateado;
+
+        setText('periodo', f.fechaIngreso + ' – ' + f.fechaCorte);
+        setText('neto', f.neto);
+        setText('bruto', f.primaBruta);
+        setText('isr', f.isr);
+        setText('imss', f.imss);
+        setText('otras', f.otrasDeducciones);
+        setText('diasPagados', f.diasPagados + ' días');
+        setText('baseAplicada', f.baseSalarial);
+
+        var detalle = byId('detalle');
+        detalle.replaceChildren();
+
+        agregarBloque(detalle, 'Datos y vacaciones', [
+          ['Nombre', f.nombre],
+          ['Fecha de ingreso', f.fechaIngreso],
+          ['Fecha de corte', f.fechaCorte],
+          ['Antigüedad', f.antiguedad + ' años'],
+          ['Días por tabla', f.diasCorresponden],
+          ['Días ya gozados', f.diasGozados],
+          ['Días pendientes capturados', f.diasPendientes],
+          ['Días que se pagan', f.diasPagados],
+          ['Base salarial', f.baseSalarial],
+          ['Salario base aplicado', f.salarioBase]
+        ], 'Cálculo: ' + f.formulaDias + '. Si no se capturan días pendientes, se usan los días gozados o, si no hay, el periodo completo.');
+
+        agregarBloque(detalle, 'Prima vacacional', [
+          ['Salario diario', f.salarioDiario],
+          ['Salario diario integrado', f.salarioDiarioIntegrado],
+          ['Porcentaje de prima', f.primaPct],
+          ['Prima bruta', f.primaBruta],
+          ['Exención de ISR', f.exencion],
+          ['Prima gravable', f.gravable]
+        ], 'La exención es de 15 UMA diarias por año de calendario. Si ya se usó en otra prima del año, el remanente puede ser menor.');
+
+        agregarBloque(detalle, 'Retención de ISR', [
+          ['Método', f.metodoISR],
+          ['Ingreso mensual ordinario', f.ingresoOrdinario],
+          ['Factor art. 174', f.factor],
+          ['Base conjunta', f.baseConjunta],
+          ['Límite inferior', f.limiteInferior],
+          ['Excedente', f.excedente],
+          ['Cuota fija', f.cuotaFija],
+          ['Tasa', f.tasa],
+          ['ISR conjunto', f.isrConjunto],
+          ['ISR ordinario', f.isrOrdinario],
+          ['Diferencia de ISR', f.diferenciaISR],
+          ['Tasa efectiva art. 174', f.tasaEfectiva],
+          ['ISR art. 174', f.isr174],
+          ['ISR directo atribuible', f.isrDirecto],
+          ['Subsidio del mes (referencia)', f.subsidio],
+          ['ISR final', f.isr]
+        ], 'Tramo aplicado: ' + f.tramoISR + ' El art. 174 es opcional. El método directo suma la prima gravable al ingreso ordinario, aplica la tarifa al total y resta el ISR ordinario; el subsidio se aplica al mes completo.');
+
+        agregarBloque(detalle, 'Deducciones y neto', [
+          ['Prima bruta', f.primaBruta],
+          ['− ISR', f.isr],
+          ['− IMSS obrero', f.imss],
+          ['− Otras deducciones', f.otrasDeducciones],
+          ['= Total de deducciones', f.totalDeducciones],
+          ['= Prima neta', f.neto]
+        ], 'La cuota obrera del IMSS es una estimación opcional; la prima integra el SBC y la cuota se determina en la cédula mensual.');
+
+        renderAdvertencias(advertencias);
+        byId('resultados').hidden = false;
+        byId('resultados').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+
+      function agregarBloque(contenedor, titulo, filas, nota) {
+        var bloque = document.createElement('section');
+        bloque.className = 'detail-block';
+
+        var heading = document.createElement('h3');
+        heading.textContent = titulo;
+        bloque.appendChild(heading);
+
+        var dl = document.createElement('dl');
+        filas.forEach(function (fila) {
+          var dt = document.createElement('dt');
+          dt.textContent = fila[0];
+          var dd = document.createElement('dd');
+          dd.textContent = fila[1];
+          dl.appendChild(dt);
+          dl.appendChild(dd);
+        });
+        bloque.appendChild(dl);
+
+        if (nota) {
+          var p = document.createElement('p');
+          p.className = 'detail-note';
+          p.textContent = nota;
+          bloque.appendChild(p);
+        }
+
+        contenedor.appendChild(bloque);
+      }
+
+      function renderAdvertencias(advertencias) {
+        var contenedor = byId('advertencias');
+        var lista = byId('listaAdvertencias');
+        lista.replaceChildren();
+
+        if (!advertencias || advertencias.length === 0) {
+          contenedor.hidden = true;
+          return;
+        }
+
+        advertencias.forEach(function (texto) {
+          var li = document.createElement('li');
+          li.textContent = texto;
+          lista.appendChild(li);
+        });
+        contenedor.hidden = false;
+      }
+
+      function limpiarFormulario() {
+        byId('form').reset();
+        byId('nombre').value = '';
+        byId('fechaIngreso').value = '';
+        byId('fechaCorte').value = hoyISO();
+        byId('salarioDiario').value = '';
+        byId('salarioDiarioIntegrado').value = '';
+        byId('diasPendientes').value = '';
+        byId('diasGozados').value = '0';
+        byId('primaPct').value = (state.primaMinima * 100).toFixed(2);
+        byId('ingresoMensual').value = '';
+        byId('otrasDeducciones').value = '0';
+        byId('conceptoOtras').value = '';
+        byId('aplicarSubsidio').checked = false;
+        byId('deducirIMSS').checked = false;
+
+        document.querySelectorAll('input[name="baseSalarial"]').forEach(function (radio) {
+          radio.checked = radio.value === state.baseSDI;
+        });
+
+        limpiarErrores();
+        ocultarBanner();
+        byId('resultados').hidden = true;
+        actualizarMetodo();
+        actualizarPreview();
+        actualizarMontosBase();
+        byId('fechaIngreso').focus();
+      }
+
+      function deshabilitarFormulario() {
+        byId('form').querySelectorAll('input, select, button').forEach(function (el) {
+          el.disabled = true;
+        });
+      }
+
+      function obtenerBaseSeleccionada() {
+        var radio = document.querySelector('input[name="baseSalarial"]:checked');
+        return radio ? radio.value : '';
+      }
+
+      function calcularAnios(ingresoISO, corteISO) {
+        var ingreso = parseFechaLocal(ingresoISO);
+        var corte = parseFechaLocal(corteISO);
+        if (!ingreso || !corte) return null;
+        if (corte.getTime() < ingreso.getTime()) return null;
+
+        var anios = corte.getFullYear() - ingreso.getFullYear();
+        if (corte.getMonth() < ingreso.getMonth() ||
+          (corte.getMonth() === ingreso.getMonth() && corte.getDate() < ingreso.getDate())) {
+          anios -= 1;
+        }
+        return anios;
+      }
+
+      function parseFechaLocal(iso) {
+        if (!iso) return null;
+        var partes = String(iso).split('-');
+        if (partes.length !== 3) return null;
+        var anio = Number(partes[0]);
+        var mes = Number(partes[1]);
+        var dia = Number(partes[2]);
+        if (!isFinite(anio) || !isFinite(mes) || !isFinite(dia)) return null;
+        var fecha = new Date(anio, mes - 1, dia, 12, 0, 0);
+        if (fecha.getFullYear() !== anio || fecha.getMonth() !== mes - 1 || fecha.getDate() !== dia) return null;
+        return fecha;
+      }
+
+      function buscarDias(anios) {
+        var dias = 0;
+        for (var i = 0; i < state.tablaVacaciones.length; i += 1) {
+          var fila = state.tablaVacaciones[i];
+          if (anios >= fila.antiguedad) dias = fila.dias;
+          else break;
+        }
+        return dias;
+      }
+
+      function hoyISO() {
+        var hoy = new Date();
+        var mes = String(hoy.getMonth() + 1).padStart(2, '0');
+        var dia = String(hoy.getDate()).padStart(2, '0');
+        return hoy.getFullYear() + '-' + mes + '-' + dia;
+      }
+
+      function numeroOpcion(valor) {
+        if (valor === null || valor === undefined || String(valor).trim() === '') return NaN;
+        return Number(String(valor).trim().replace(/,/g, ''));
+      }
+
+      function numeroParaInput(valor) {
+        if (valor === null || valor === undefined || valor === '') return '';
+        var numero = Number(valor);
+        return isFinite(numero) ? String(numero) : '';
+      }
+
+      function formatearMonedaLocal(valor) {
+        var numero = Number(valor);
+        if (!isFinite(numero) || String(valor).trim() === '') return '$0.00';
+        return new Intl.NumberFormat('es-MX', {
+          style: 'currency',
+          currency: 'MXN',
+          minimumFractionDigits: 2,
+          maximumFractionDigits: 2
+        }).format(numero);
+      }
+
+      function formatearPorcentajeLocal(valor) {
+        var numero = Number(valor);
+        if (!isFinite(numero)) return '';
+        return numero.toFixed(2) + '%';
+      }
+
+      function mensajeError(error) {
+        if (!error) return 'error desconocido.';
+        return error.message ? error.message : String(error);
+      }
+
+      function mostrarBanner(mensaje, tipo) {
+        var banner = byId('banner');
+        banner.textContent = mensaje;
+        banner.className = 'banner ' + (tipo || 'error');
+        banner.hidden = false;
+      }
+
+      function ocultarBanner() {
+        var banner = byId('banner');
+        banner.hidden = true;
+        banner.textContent = '';
+      }
+
+      document.addEventListener('DOMContentLoaded', init);
+    })();
+  </script>
+</body>
+</html>
